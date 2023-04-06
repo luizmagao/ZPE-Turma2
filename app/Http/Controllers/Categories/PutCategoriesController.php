@@ -19,7 +19,7 @@ class PutCategoriesController extends Controller
                 'description',
                 'actived'
             ]));
-            return $category;
+            return response()->json($category, 200);
         } catch (Exception $e) {
             return response()->json($e->getMessage(), 500);
         }
